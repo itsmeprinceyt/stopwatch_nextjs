@@ -9,6 +9,9 @@ export const metadata = {
   description: "A sleek and precise stopwatch built with Next.js and Tailwind CSS. Perfect for timing any activity with ease and accuracy.",
   keywords: "stopwatch, timer, next.js, Tailwind CSS, ItsMe Prince, web tools",
   author: "Mohd Uvaish",
+  icons: {
+    icon: "/stopwatch.png",
+  },
 };
 
 
