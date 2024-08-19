@@ -46,16 +46,17 @@ export default function Home() {
   }
   return (
     <div className="min-h-screen text-white flex flex-col justify-center items-center">
-      <div className="main-content z-10 flex flex-col justify-center items-center h-full  bg-white-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-100/20 shadow-xl shadow-black p-10 gap-10 rounded-xl">
+      <div className="main-content z-10 flex flex-col justify-around items-center h-[380px]  bg-white-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-100/20 shadow-xl shadow-black p-10 gap-6 rounded-xl">
 
-        <div className="font-semibold text-6xl flex flex-col gap-4 justify-center items-center">
-          <div>Stopwatch</div>
-          <div className="font-extralight text-xs">Made by @itsmeprinceyt</div>
+        <div className="font-semibold text-6xl flex flex-col gap-8 justify-center items-center">
+          <div className="text-glow">Stopwatch</div>
+          <div className="font-extralight text-xs text-glow">Made by @itsmeprinceyt</div>
         </div>
+        <div className="z-10 h-[2px] bg-white/10 w-[300px] absolute"></div>
         <div className="flex flex-col justify-center items-center">
-          <div className="text-5xl p-5 text-black text-shadow font-extralight" >{properTime()}</div>
+          <div className="text-5xl p-5 text-glow font-extralight" >{properTime()}</div>
           <div className=" flex gap-12">
-            <button onClick={reset} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out hover:animate-spin hover:shadow-none">
+            <button onClick={reset} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full transition-all ease-in-out hover:scale-110 glow-white active:scale-125">
               <Image
                 src="/reset-svgrepo-com.svg"
                 width={20}
@@ -63,7 +64,7 @@ export default function Home() {
                 alt="Repeat"
               />
             </button>
-            <button onClick={start} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out ">
+            <button onClick={start} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full transition-all ease-in-out hover:scale-110 glow-white active:scale-125">
               <Image
                 className="rotate-180"
                 src="/mini-arrow-start-svgrepo-com.svg"
@@ -72,7 +73,7 @@ export default function Home() {
                 alt="Repeat"
               />
             </button>
-            <button onClick={stop} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out">
+            <button onClick={stop} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full transition-all ease-in-out hover:scale-110 glow-white active:scale-125">
               <Image
                 src="/pause-svgrepo-com.svg"
                 width={20}
