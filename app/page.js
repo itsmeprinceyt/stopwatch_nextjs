@@ -42,51 +42,54 @@ export default function Home() {
     minutes = String(minutes).padStart(2, "0");
     seconds = String(seconds).padStart(2, "0");
 
-    return ` ${hours}: ${minutes} : ${seconds} `;
+    return ` ${hours} : ${minutes} : ${seconds} `;
   }
   return (
-    <div className="min-h-screen text-white grid grid-cols-1 sm:grid-cols-2 ">
-      <div className="grid ">
+    <div className="min-h-screen text-white flex flex-col justify-center items-center">
+      <div className="main-content z-10 flex flex-col justify-center items-center h-full  bg-white-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-40 border border-gray-100/20 shadow-xl shadow-black p-10 gap-10 rounded-xl">
+
+        <div className="font-semibold text-6xl flex flex-col gap-4 justify-center items-center">
+          <div>Stopwatch</div>
+          <div className="font-extralight text-xs">Made by @itsmeprinceyt</div>
+        </div>
         <div className="flex flex-col justify-center items-center">
-          <div className="text-5xl p-5 text-black">{properTime()}</div>
-          <div className=" flex gap-16">
-            <button onClick={reset} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl">
+          <div className="text-5xl p-5 text-black text-shadow font-extralight" >{properTime()}</div>
+          <div className=" flex gap-12">
+            <button onClick={reset} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out hover:animate-spin hover:shadow-none">
               <Image
-              src="/reset-svgrepo-com.svg"
-              width={20}
-              height={20}
-              alt="Repeat"
+                src="/reset-svgrepo-com.svg"
+                width={20}
+                height={20}
+                alt="Repeat"
               />
             </button>
-            <button onClick={start} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl">
-            <Image
-              src="/mini-arrow-start-svgrepo-com.svg"
-              width={20}
-              height={20}
-              alt="Repeat"
+            <button onClick={start} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out ">
+              <Image
+                className="rotate-180"
+                src="/mini-arrow-start-svgrepo-com.svg"
+                width={20}
+                height={20}
+                alt="Repeat"
               />
             </button>
-            <button onClick={stop} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl">
-            <Image
-              src="/pause-svgrepo-com.svg"
-              width={20}
-              height={20}
-              alt="Repeat"
+            <button onClick={stop} className="flex justify-center items-center bg-white h-[50px] w-[50px] rounded-full shadow-xl hover:bg-sky-200 transition-all ease-in-out">
+              <Image
+                src="/pause-svgrepo-com.svg"
+                width={20}
+                height={20}
+                alt="Repeat"
               />
             </button>
           </div>
         </div>
       </div>
-      <div className="relative flex items-center justify-center text-black text-8xl">
-  <span className="relative z-10 text-shadow">Stopwatch</span>
-  <Image
-    src="/scenary.jpg"
-    fill={true}
-    alt="Scenary"
-    className="absolute inset-0 object-cover"
-  />
-</div>
-
+      {/*Background Image*/}
+      <Image
+        src="/mountain2.jpg"
+        fill={true}
+        alt="Scenary"
+        className="absolute inset-0 object-cover "
+      />
     </div>
   );
 }
