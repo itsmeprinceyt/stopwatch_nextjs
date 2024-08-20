@@ -50,6 +50,8 @@ If you would like to contribute to this project:
 
 ## Explanation Video
 
+https://youtu.be/lrZp1JvKC8E
+
 ## Live Link
 
 https://stopwatch-nextjs-pearl.vercel.app/
