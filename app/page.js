@@ -37,7 +37,7 @@ export default function Home() {
     let hours = Math.floor(timer / (1000 * 60 * 60));
     let minutes = Math.floor(timer / (1000 * 60) % 60);
     let seconds = Math.floor(timer / (1000) % 60);
-    //let miliseconds = Math.floor( ( timer / 1000) / 10);
+    //let miliseconds = Math.floor( ( timer % 1000) / 10);
 
     hours = String(hours).padStart(2, "0");
     minutes = String(minutes).padStart(2, "0");
@@ -45,7 +45,7 @@ export default function Home() {
     //miliseconds = String(miliseconds).padStart(2, "0");
 
     return ` ${hours} : ${minutes} : ${seconds} `;
-    //return ` ${hours} : ${minutes} : ${seconds} : ${miliseconds}`;
+    //return ` ${hours} : ${minutes} : ${seconds} : ${miliseconds} `;
   }
   return (
     <div className="min-h-screen text-white flex flex-col justify-center items-center">
